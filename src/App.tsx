@@ -1,7 +1,8 @@
-import React, { FC, ReactElement } from "react";
+import React, { FC, ReactElement } from 'react';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 const App: FC = (): ReactElement => {
-  return <div className='text-blue-500'>Hello World!</div>;
+  return <Dashboard />;
 };
 
 export default App;
