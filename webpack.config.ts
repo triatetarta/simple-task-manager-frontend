@@ -5,10 +5,16 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
+import { Configuration as WebpackConfiguration } from 'webpack';
+import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+
+interface Configuration extends WebpackConfiguration {
+  devServer?: WebpackDevServerConfiguration;
+}
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-module.exports = {
+const config: Configuration = {
   mode: isDevelopment ? 'development' : 'production',
   entry: './src/index.tsx',
   target: 'web',
@@ -82,3 +88,5 @@ module.exports = {
     historyApiFallback: true,
   },
 };
+
+export default config;
