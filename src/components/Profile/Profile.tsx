@@ -4,9 +4,7 @@ interface IProfile {
   name?: string;
 }
 
-const Profile: FC<IProfile> = (props): ReactElement => {
-  const { name } = props;
-
+const Profile: FC<IProfile> = ({ name }): ReactElement => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="w-[96px] h-[96px] bg-primary-main mb-4 rounded-full flex items-center justify-center text-4xl">

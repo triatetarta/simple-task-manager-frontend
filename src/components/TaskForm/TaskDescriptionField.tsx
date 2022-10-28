@@ -1,9 +1,10 @@
 import React, { FC, ReactElement } from 'react';
 import { ITextField } from './interfaces/ITextField';
 
-const TaskDescriptionField: FC<ITextField> = (props): ReactElement => {
-  const { value, onChange } = props;
-
+const TaskDescriptionField: FC<ITextField> = ({
+  value,
+  onChange,
+}): ReactElement => {
   return (
     <textarea
       name="description"

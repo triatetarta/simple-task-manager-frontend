@@ -1,9 +1,13 @@
 import React, { FC, ReactElement } from 'react';
 import { ISelectField } from './interfaces/ISelectField';
 
-const TaskSelectField: FC<ISelectField> = (props): ReactElement => {
-  const { label, value, onChange, items, name } = props;
-
+const TaskSelectField: FC<ISelectField> = ({
+  label,
+  value,
+  onChange,
+  items,
+  name,
+}): ReactElement => {
   return (
     <div className="flex-1">
       <label className="text-sm" htmlFor={name}>
