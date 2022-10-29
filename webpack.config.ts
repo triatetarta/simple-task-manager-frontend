@@ -73,6 +73,9 @@ const config: Configuration = {
     }),
   ],
   devServer: {
+    proxy: {
+      '/api': 'http://localhost:8888',
+    },
     client: {
       overlay: {
         warnings: false,
